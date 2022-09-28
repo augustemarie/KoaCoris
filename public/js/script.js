@@ -3,6 +3,7 @@ $(document).ready(function() {
     users.connexion();
     post.display_post();
     post.display_details();
+
    
 });
 
@@ -29,7 +30,7 @@ var users = {
                     window.localStorage.setItem("username", formData.username);
                     console.log(localStorage.getItem("username"));
 
-                   window.location.replace('views/accueil.php');
+                   window.location.replace('/accueil');
                 },
                 error: function(xhr, status, error) {
                     console.error(xhr);
@@ -59,7 +60,7 @@ var users = {
                 success: function(response) {
                     window.localStorage.setItem(formData.email, email);
                     alert(response.message)
-                    window.location.replace('views/accueil.php');
+                    window.location.replace('/accueil');
                 },
                 error: function(xhr, status, error) {
                     console.error(xhr);
@@ -76,7 +77,7 @@ var post = {
         $.ajax({
 
             type: "GET",
-            url: "http://127.0.0.1:3000/post",
+            url: "localhost:4000/post",
             contentType: "application/json",
             dataType: 'json',
             success: function(response) {
@@ -84,7 +85,7 @@ var post = {
     
                 let html_output = "";
                 $.each(post, function(key, value) {
-                    html_output += "<div class='col-3 film-details' id ='' data-id='"+value.id+"'> <img src = 'images/ALVDAN_P3.jpg.jpg' class = 'movie-card'><br> <b class ='subt' id = 'title' ><a href = 'PagesSites/news.php/" + value.id + "'>" + value.title + "</a></b> <p class = 'desc_contenu' id = 'description'>" + value.description + " </p > </div > "
+                    html_output += "<div class='col-3 film-details' id ='' data-id='"+value.id+"'> <img src = '../images/ALVDAN_P3.jpg.jpg' class = 'movie-card'><br> <b class ='subt' id = 'title' ><a href = '/news" + value.id + "'>" + value.title + "</a></b> <p class = 'desc_contenu' id = 'description'>" + value.description + " </p > </div > "
                 })
     
                 document.getElementById("films").innerHTML = html_output;
@@ -105,7 +106,7 @@ var post = {
 
             $.ajax({
                 type: "GET",
-                url: "http://127.0.0.1:3000/post/" + id,
+                url: "localhost/post/" + id,
                 contentType: "application/json",
                 dataType: 'json',
                 success: function(response) {
