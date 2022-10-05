@@ -6,7 +6,9 @@ $(document).ready(function() {
 
    
 });
- const api_base_url = "https://test3.afrikastream.com/";
+  const api_base_url = "https://test3.afrikastream.com/";
+
+
 
 var users = {
     connexion: function() {
@@ -89,8 +91,8 @@ var post = {
                 $.each(post, function(key, value) {
                     html_output += "<div class='col-3 film-details' id ='' data-id='"+value.id+"'> <img src = '../images/ALVDAN_P3.jpg.jpg' class = 'movie-card'><br> <b class ='subt' id = 'title' ><span>" + value.title + "</span></b> <p class = 'desc_contenu' id = 'description'>" + value.description + " </p > </div > "
                 })
-    $('#films').html(html_output)
-                // document.getElementById("films").innerHTML = html_output;
+    $('.films').html(html_output)
+                 document.getElementsByClassName("films").innerHTML = html_output;
             },
             error: function(xhr, status, error) {
                 console.error(xhr);
