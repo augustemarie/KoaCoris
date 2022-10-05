@@ -6,8 +6,7 @@ $(document).ready(function() {
 
    
 });
-
-// const api_base_url = "http://localhost:4000/coris-cine";
+ const api_base_url = "https://test3.afrikastream.com/";
 
 var users = {
     connexion: function() {
@@ -23,7 +22,7 @@ var users = {
 
             $.ajax({
                 type: "POST",
-                url: "http://127.0.0.1:4000/users/signin",
+                url: api_base_url+ "/users/signin",
                 contentType: "application/json",
                 data: formDataToJson,
                 success: function(response) {
@@ -55,7 +54,7 @@ var users = {
 
             $.ajax({
                 type: "POST",
-                url: "http://127.0.0.1:4000/users/register",
+                url: api_base_url + "/users/register",
                 contentType: "application/json",
                 data: formDataToJson,
                 success: function(response) {
@@ -78,15 +77,14 @@ var post = {
         $.ajax({
 
             type: "GET",
-            url: "http://127.0.0.1:4000/post",
+            url: api_base_url+'/post',
             contentType: "application/json",
             dataType: 'json',
             beforeSend: function(xhr){
                 xhr.setRequestHeader('Access-Control-Allow-Origin', '*')
             },
             success: function(response) {
-                let post = response.data; //recuperer le data (la liste des postes dans notre cas)
-    
+                let post = response.posts; //recuperer le data (la liste des postes dans notre cas)
                 let html_output = "";
                 $.each(post, function(key, value) {
                     html_output += "<div class='col-3 film-details' id ='' data-id='"+value.id+"'> <img src = '../images/ALVDAN_P3.jpg.jpg' class = 'movie-card'><br> <b class ='subt' id = 'title' ><span>" + value.title + "</span></b> <p class = 'desc_contenu' id = 'description'>" + value.description + " </p > </div > "
@@ -110,11 +108,11 @@ var post = {
 
             $.ajax({
                 type: "GET",
-                url: "http://127.0.0.1:4000/post/" + id,
+                url: api_base_url +'/post/' + id,
                 contentType: "application/json",
                 dataType: 'json',
                 success: function(response) {
-                    let film = response.data; 
+                    let film = response.post;
                     let film_output = "";
                     window.localStorage.setItem("title", film.title);
                     window.localStorage.setItem("content", film.content);
