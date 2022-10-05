@@ -1,93 +1,36 @@
+
 <%- include('./header.html') %>
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        let title= localStorage.getItem("title")
+        let content= localStorage.getItem("content")
+        let description= localStorage.getItem("description")
+        jQuery('.grand_titre').html(title);
+        jQuery('.description').html(description);
+        jQuery('.content').html(content);
+    });
+</script>
 <body>
     <br>
 <div>
     <div>
-        <b class="grand_titre" style="text-align: center">Dadju son tout premier film IMA</b><br><br>
+        <b class="grand_titre" style="text-align: center"></b><br><br>
         <div class="flex">
             <div class="deux_tiers">
 
             </div>
             <div class="tiers">
-                <b class="grand_titre">Suivez tous vos films et série </b><br><br>
-                <p class="paragraphe">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                     Quis ipsum suspendisse ultrices gravida. 
-                    Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                <b class="grand_titre">Description</b><br><br>
+                <p class="paragraphe description">
+
                 </p> <br> <br>
             </div>
         </div>
     </div>  
 
-    <div class="milieu">
-        <b style="font-size: 25px" >Synopsis</b><br><br>
-        <p class="lorem_milieu">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-             sed do eiusmod tempor incididunt ut labore et dolore magna 
-             aliqua. Quis ipsum suspendisse ultrices gravida. 
-            Risus commodo viverra maecenas accumsan lacus vel facilisis. 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-             tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
-              ultrices gravida. 
-        </p> 
-        <p class="lorem_milieu">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-             sed do eiusmod tempor incididunt ut labore et dolore magna 
-             aliqua. Quis ipsum suspendisse ultrices gravida. 
-            Risus commodo viverra maecenas accumsan lacus vel facilisis. 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-             tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
-              ultrices gravida. 
-        </p> 
-        <p class="lorem_milieu">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-             sed do eiusmod tempor incididunt ut labore et dolore magna 
-             aliqua. Quis ipsum suspendisse ultrices gravida. 
-            Risus commodo viverra maecenas accumsan lacus vel facilisis. 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-             tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
-              ultrices gravida. 
-        </p> 
+    <div class="milieu content">
 
     </div>
-        
-
-    <div>
-        <b class="milieu" style="font-size: 25px">Partager</b>
-            <div>
-                
-            </div>
-        </div>
-
-    <div>
-    <div>
-        <br>
-        <b class="milieu" style="font-size: 22px">Acteur Principal</b>
-            <div>
-                <img src="../public/images/dadju.jpg" class="dadju">
-            
-            </div>
-        </div>
-
-    <div>
-
-    
-    <div>
-        <br>
-
-       <div class="filter_bottom">
-       <b class="milieu" style="font-size: 22px">A lire aussi</b>
-            <div>
-                <img src="../public/images/dadju.jpg" class="dadju">
-            
-            </div>
-        </div>
-       </div>
-
-    <div>
-
-    
-
    
 </div>
 

@@ -7,6 +7,8 @@ $(document).ready(function() {
    
 });
 
+// const api_base_url = "http://localhost:4000/coris-cine";
+
 var users = {
     connexion: function() {
         $("#connect").click(function(e) {
@@ -21,14 +23,13 @@ var users = {
 
             $.ajax({
                 type: "POST",
-                url: "http://127.0.0.1:3000/users/signin",
+                url: "http://127.0.0.1:4000/users/signin",
                 contentType: "application/json",
                 data: formDataToJson,
                 success: function(response) {
                     alert(response.message);
 
                     window.localStorage.setItem("username", formData.username);
-                    console.log(localStorage.getItem("username"));
 
                    window.location.replace('/accueil');
                 },
@@ -54,7 +55,7 @@ var users = {
 
             $.ajax({
                 type: "POST",
-                url: "http://127.0.0.1:3000/users/register",
+                url: "http://127.0.0.1:4000/users/register",
                 contentType: "application/json",
                 data: formDataToJson,
                 success: function(response) {
@@ -77,18 +78,21 @@ var post = {
         $.ajax({
 
             type: "GET",
-            url: "localhost:4000/post",
+            url: "http://127.0.0.1:4000/post",
             contentType: "application/json",
             dataType: 'json',
+            beforeSend: function(xhr){
+                xhr.setRequestHeader('Access-Control-Allow-Origin', '*')
+            },
             success: function(response) {
                 let post = response.data; //recuperer le data (la liste des postes dans notre cas)
     
                 let html_output = "";
                 $.each(post, function(key, value) {
-                    html_output += "<div class='col-3 film-details' id ='' data-id='"+value.id+"'> <img src = '../images/ALVDAN_P3.jpg.jpg' class = 'movie-card'><br> <b class ='subt' id = 'title' ><a href = '/news" + value.id + "'>" + value.title + "</a></b> <p class = 'desc_contenu' id = 'description'>" + value.description + " </p > </div > "
+                    html_output += "<div class='col-3 film-details' id ='' data-id='"+value.id+"'> <img src = '../images/ALVDAN_P3.jpg.jpg' class = 'movie-card'><br> <b class ='subt' id = 'title' ><span>" + value.title + "</span></b> <p class = 'desc_contenu' id = 'description'>" + value.description + " </p > </div > "
                 })
-    
-                document.getElementById("films").innerHTML = html_output;
+    $('#films').html(html_output)
+                // document.getElementById("films").innerHTML = html_output;
             },
             error: function(xhr, status, error) {
                 console.error(xhr);
@@ -106,16 +110,18 @@ var post = {
 
             $.ajax({
                 type: "GET",
-                url: "localhost/post/" + id,
+                url: "http://127.0.0.1:4000/post/" + id,
                 contentType: "application/json",
                 dataType: 'json',
                 success: function(response) {
                     let film = response.data; 
                     let film_output = "";
-                    $.each(film, function(key, value) {
-                        film_output += "<div class='col-3'><a href='' </div>"
-                    })
-                    document.getElementById("detail_film").innerHTML = film_output;
+                    window.localStorage.setItem("title", film.title);
+                    window.localStorage.setItem("content", film.content);
+                    window.localStorage.setItem("description", film.description);
+
+                    window.location.replace('/synopsis');
+
                 },
                 error: function(xhr, status, error) {
                     console.error(xhr);
@@ -128,4 +134,3 @@ var post = {
     }
 
 }
-
