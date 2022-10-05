@@ -37,7 +37,7 @@ exports.createServer=function (){
         app.use(router.routes()).use(router.allowedMethods());
         app.use(cors(koaOptions));
 
-        app.listen(3000, () => console.log('Server started...'));
+        app.listen(6000,() => console.log('Server started...'));
 
 };
 
