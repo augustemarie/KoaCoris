@@ -417,6 +417,10 @@ top: 1050px; */
         margin-right: 20px;
         margin-left: 20px;
     }
+
+    .films{
+        display: flex;
+    }
     
     .filter-movie-card {
         top: 0;
@@ -435,6 +439,7 @@ top: 1050px; */
         font-size: 30px;
         line-height: 36px;
         color: #FFFFFF;
+        width: fit-content;
     }
     
     .title-bottom {
@@ -653,6 +658,7 @@ top: 1050px; */
     .desc_contenu {
         text-align: left;
         padding-left: 15px;
+        width: fit-content;
     }
     
     .subt {

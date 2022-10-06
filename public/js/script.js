@@ -89,10 +89,10 @@ var post = {
                 let post = response.posts; //recuperer le data (la liste des postes dans notre cas)
                 let html_output = "";
                 $.each(post, function(key, value) {
-                    html_output += "<div class='col-3 film-details' id ='' data-id='"+value.id+"'> <img src = '../images/ALVDAN_P3.jpg.jpg' class = 'movie-card'><br> <b class ='subt' id = 'title' ><span>" + value.title + "</span></b> <p class = 'desc_contenu' id = 'description'>" + value.description + " </p > </div > "
+                    html_output += "<div class='col-3 film-details' id ='' data-id='"+value.id+"'> <img src = '../images/ALVDAN_P3.jpg.jpg' class = 'movie-card'><br> <b class ='subt' id = 'title' ><h5>" + value.title + "</h5></b> <div class = 'desc_contenu' id = 'description'>" + value.description + " </div > </div > "
                 })
     $('.films').html(html_output)
-                 document.getElementsByClassName("films").innerHTML = html_output;
+                 // document.getElementsByClassName("films").innerHTML = html_output;
             },
             error: function(xhr, status, error) {
                 console.error(xhr);
