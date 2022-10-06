@@ -1,14 +1,20 @@
+    .slick-slider::after  {
+        width: 95%;
+        margin: auto;
+        display: flex;
+    }
+
     header {
         background: #FFCC00;
         width: 100%;
     }
-    
+
     .div-logo {
         /* margin-left: -10px; */
         margin-top: 2px;
         left: -15px;
     }
-    
+
     .container {
         font-family: 'Inter';
         font-style: normal;
@@ -16,7 +22,7 @@
         /* identical to box height */
         color: black;
     }
-    
+
     .carousel-caption {
         width: 100% !important;
         left: 0 !important;
@@ -27,17 +33,17 @@
         border-radius: 30px;
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) -10.09%, #000000 89.91%);
     }
-    
+
     .caption_in {
         position: absolute;
         bottom: 40px;
     }
-    
+
     .carousel-control-next,
     .carousel-control-prev {
         z-index: 900 !important;
     }
-    
+
     .text-caroussel {
         font-size: 62px;
         line-height: 75px;
@@ -46,23 +52,23 @@
     /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
     /* Carousel base class */
-    
+
     .carousel {
         margin-bottom: 4rem;
         width: auto;
     }
     /* Since positioning the image, we need to help out the caption */
-    
+
     .carousel-caption {
         bottom: 3rem;
         z-index: 10;
     }
     /* Declare heights because of positioning of img element */
-    
+
     .carousel-item {
         height: 32rem;
     }
-    
+
     .carousel-item>img {
         position: absolute;
         top: 0;
@@ -73,16 +79,16 @@
         object-fit: cover;
         border-radius: 30px;
     }
-    
+
     .bloc-images {
         display: flex;
     }
-    
+
     .img-slides {
         width: 200 px;
         height: 350px
     }
-    
+
     .image-selectionner {
         /* position: absolute; */
         width: 250px;
@@ -92,7 +98,7 @@ top: 700px; */
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
         border-radius: 20px;
     }
-    
+
     .image-selectionner-milieu {
         /* position: absolute; */
         width: 250px;
@@ -102,7 +108,7 @@ top: 700px; */
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
         border-radius: 20px;
     }
-    
+
     .image-selectionner-droite {
         /* position: absolute; */
         width: 250px;
@@ -112,7 +118,7 @@ top: 700px; */
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
         border-radius: 20px;
     }
-    
+
     .image-selectionner-bas {
         /* position: absolute; */
         width: 250px;
@@ -122,7 +128,7 @@ top: 1380px; */
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
         border-radius: 20px;
     }
-    
+
     .image-selectionner-milieu-bas {
         /* position: absolute; */
         width: 250px;
@@ -132,7 +138,7 @@ top: 1380px; */
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
         border-radius: 20px;
     }
-    
+
     .image-selectionner-droite-bas {
         /* position: absolute; */
         width: 250px;
@@ -142,7 +148,7 @@ top: 1380px; */
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
         border-radius: 20px;
     }
-    
+
     .div-email {
         /* position: absolute; */
         width: 250px;
@@ -152,14 +158,14 @@ top: 1380px; */
         /* left: 30px;
     top: 1px; */
     }
-    
+
     .border-submit {
         width: 200px;
         height: 50.83px;
         background: #FFCC00;
         border-radius: 50px;
     }
-    
+
     .div-submit {
         width: 250px;
         height: 71px;
@@ -168,7 +174,7 @@ top: 1380px; */
         /* left: 30px;
     top: 310px; */
     }
-    
+
     .div-password {
         padding-top: 200px;
         width: 250px;
@@ -177,7 +183,7 @@ top: 1380px; */
         /* left: 30px;
     top: 50px; */
     }
-    
+
     .border-input {
         box-sizing: border-box;
         /* width: 20px;
@@ -191,13 +197,13 @@ top: 280px; */
         border: 2px solid #FFCC00;
         border-radius: 50px;
     }
-    
+
     .connexion-texte {
         width: 300px;
         height: 52px;
         padding-top: 150px;
     }
-    
+
     .texte {
         font-family: 'MTN Brighter Sans';
         font-style: normal;
@@ -208,15 +214,15 @@ top: 280px; */
         text-align: center;
         color: #1E1E1E;
     }
-    
+
     .connexion-gauche {
         background-color: white;
     }
-    
+
     .connexion-droite {
         background-image: url('../images/image1');
     }
-    
+
     .texte-selectionner {
         width: 70px;
         height: 15px;
@@ -229,7 +235,7 @@ top: 280px; */
         line-height: 36px;
         color: #1E1E1E;
     }
-    
+
     .texte-selectionner-bas {
         width: 70px;
         height: 15px;
@@ -242,7 +248,7 @@ top: 280px; */
         line-height: 36px;
         color: #1E1E1E;
     }
-    
+
     .image-pub {
         width: 500px;
         height: 200px;
@@ -250,7 +256,7 @@ top: 280px; */
 top: 1050px; */
         border-radius: 49px;
     }
-    
+
     .image-banniere {
         width: 1326px;
         height: 584.12px;
@@ -259,13 +265,13 @@ top: 1050px; */
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) -10.09%, #000000 89.91%);
         border-radius: 49px;
     }
-    
+
     .img-logo {
         width: 100%;
         height: 100%;
         margin-left: 2px;
     }
-    
+
     .titre-caroussel {
         font-family: 'Inter';
         font-style: normal;
@@ -274,7 +280,7 @@ top: 1050px; */
         line-height: 75px;
         color: #FFFFFF;
     }
-    
+
     .btnDecouvrir {
         background: #FFCC00;
         padding: 10px;
@@ -287,7 +293,7 @@ top: 1050px; */
         line-height: 30px;
         color: #1E1E1E;
     }
-    
+
     .text-nav-secondary {
         font-family: 'MTN Brighter Sans';
         font-style: normal;
@@ -298,7 +304,7 @@ top: 1050px; */
         color: #1E1E1E;
         padding-left: 20px;
     }
-    
+
     .text-nav-white {
         font-family: 'MTN Brighter Sans';
         font-style: normal;
@@ -309,7 +315,7 @@ top: 1050px; */
         color: #1E1E1E;
         padding-left: 20px;
     }
-    
+
     .login_bloc {
         text-align: center;
         width: 50%;
@@ -317,7 +323,7 @@ top: 1050px; */
         align-items: center;
         height: 90vh;
     }
-    
+
     .login-content {
         margin-top: 180px;
         text-align: center;
@@ -325,11 +331,11 @@ top: 1050px; */
         width: 50%;
         min-width: 500px;
     }
-    
+
     .flex {
         display: flex;
     }
-    
+
     .conteneur-login {
         width: 50%;
         min-width: 500px;
@@ -337,20 +343,20 @@ top: 1050px; */
         height: 90vh;
         margin-left: 60px
     }
-    
+
     .contenaire-signin {
         width: 350px;
         margin: auto;
         height: 90vh;
     }
-    
+
     .signin-content {
         margin-bottom: 10px;
         align-items: center;
         color: #fff;
         text-align: center;
     }
-    
+
     .my_input {
         margin-bottom: 10px;
         width: 280px;
@@ -359,16 +365,12 @@ top: 1050px; */
         padding-left: 5px;
         padding: 8px;
     }
-    
+
     .text {
         padding-left: 10px;
     }
-    
-    .slider {
-        width: 95%;
-        margin: auto;
-    }
-    
+
+
     .image-slider {
         width: 100%;
         height: 100%;

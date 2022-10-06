@@ -44,6 +44,13 @@ exports.createServer=function (){
 
 
     //Pages Sites
+
+
+
+router.get('/', async ctx => {
+        await ctx.redirect("/accueil");
+})
+
 router.get('/accueil', async ctx => { await ctx.render('accueil');})
 
 router.get('/films', async ctx => { await ctx.render('films');})
