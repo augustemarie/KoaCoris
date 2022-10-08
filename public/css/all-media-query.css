@@ -1,0 +1,128 @@
+/**
+=================================================
+All Media Queries Stylesheet
+=================================================
++*/
+
+
+@media (max-width: 1300px) {
+    .cc-container {
+        padding: 0 4.75rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .cc-brand-img {
+        height: 40px;
+        width: 150px;
+    }
+    .cc-container {
+        padding: 0 3.75rem;
+    }
+    .cc-navbar-mobile {
+        display: block;
+        margin-left: 1.5rem;
+    }
+    .cc-navbar .me-nav-inner {
+        display: none;
+    }
+    .cc-nav-link {
+        margin-left: 2.125rem;
+    }
+    .cc-pagination-inner {
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .cc-column-3 {
+        width: calc(100% / 2 - 24px)
+    }
+    .cc-btn {
+        padding: 0.7rem 1.8rem;
+        font-size: 0.8rem;
+    }
+    .cc-btn-lg {
+        padding: 0.8rem 2rem;
+        font-size: 0.9rem;
+    }
+    .cc-btn + .cc-btn {
+        margin-left: 1.3rem;
+    }
+    .cc-page-item {
+        font-size: 0.875rem;
+    }
+    .cc-page-link {
+        height: 2.25rem;
+        width: 2.25rem;
+        line-height: 2.25rem;
+    }
+    .cc-page-prev {
+        margin-right: 1rem;
+    }
+    .cc-page-next {
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .cc-section {
+        padding: 9rem 0;
+    }
+    .cc-container {
+        padding: 0 1.25rem;
+    }
+    .cc-card-img {
+        height: 300px;
+    }
+    .cc-card-title {
+        font-size: 1rem;
+    }
+    .cc-pagination-inner {
+        margin-top: 2rem;
+    }
+    .cc-form-field, .me-field-search {
+        font-size: 0.8rem;
+    }
+    .cc-form-field {
+        height: 2.7rem;
+        padding: 0.8rem 1.425rem;
+    }
+}
+
+@media (max-width: 535px) {
+    .cc-section {
+        padding: 4rem 0;
+    }
+    .cc-column-3 {
+        width: 100%;
+    }
+    .cc-page-item {
+        font-size: 0.75rem;
+        margin: 0 0.375rem 1.125rem;
+    }
+    .cc-page-prev {
+        margin-right: 0;
+    }
+    .cc-page-next {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 470px) {
+    .cc-navbar-mobile {
+        margin-left: 1rem;
+    }
+    .cc-btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.7rem;
+    }
+    .cc-btn-lg {
+        padding: 0.6rem 2rem;
+        font-size: 0.8rem;
+    }
+    .cc-btn + .cc-btn {
+        margin-left: 0;
+        margin-top: 1.5rem;
+    }
+}

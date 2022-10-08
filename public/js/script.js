@@ -12,27 +12,32 @@ $(document).ready(function() {
 
 var users = {
     connexion: function() {
-        $("#connect").click(function(e) {
+        $("#login").click(function(e) {
             e.preventDefault();
+            // alert("nbjnmnm")
 
             var formData = new Object();
 
-            formData.username = $("#username").val();
+            formData.username = $("#email").val();
             formData.password = $("#password").val();
 
             let formDataToJson = JSON.stringify(formData);
 
             $.ajax({
                 type: "POST",
-                url: api_base_url+ "/users/signin",
+                url: api_base_url+ "users/signin",
                 contentType: "application/json",
                 data: formDataToJson,
                 success: function(response) {
                     alert(response.message);
+                    let userData = response.users;
 
-                    window.localStorage.setItem("username", formData.username);
-
-                   window.location.replace('/accueil');
+                    if (userData.role=="USERS") {
+                        window.location.replace('/index');
+                    }else if (userData.role=="ADMIN"){
+                        window.location.replace('/dashboard/articles');
+                    }
+                    window.localStorage.setItem("username", userData.email);
                 },
                 error: function(xhr, status, error) {
                     console.error(xhr);
@@ -41,7 +46,7 @@ var users = {
         });
     },
     register : function (){
-        $("#ins").click(function(e) {
+        $("#register").click(function(e) {
             e.preventDefault();
     
             var formData = new Object();
@@ -56,13 +61,18 @@ var users = {
 
             $.ajax({
                 type: "POST",
-                url: api_base_url + "/users/register",
+                url: api_base_url + "users/register",
                 contentType: "application/json",
                 data: formDataToJson,
                 success: function(response) {
                     window.localStorage.setItem(formData.email, email);
                     alert(response.message)
-                    window.location.replace('/accueil');
+                    if (formData.role="USERS") {
+                        window.location.replace('/index');
+                    }else if (formData.role="ADMIN"){
+                        window.location.replace('/dashboard/articles');
+
+                    }
                 },
                 error: function(xhr, status, error) {
                     console.error(xhr);

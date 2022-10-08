@@ -48,10 +48,14 @@ exports.createServer=function (){
 
 
 router.get('/', async ctx => {
-        await ctx.redirect("/accueil");
+        await ctx.redirect("/index");
 })
+router.get('/dashboard/categories', async ctx =>{ await ctx.render('/dashboard/categories')})
+router.get('/dashboard/types', async ctx =>{ await ctx.render('/dashboard/types')})
+router.get('/dashboard/articles', async ctx =>{ await ctx.render('/dashboard/articles')})
+router.get('/dashboard/categories', async ctx =>{ await ctx.render('/dashboard/categories')})
 
-router.get('/accueil', async ctx => { await ctx.render('accueil');})
+router.get('/index', async ctx => { await ctx.render('index');})
 
 router.get('/films', async ctx => { await ctx.render('films');})
 
@@ -59,16 +63,15 @@ router.get('/series', async ctx => { await ctx.render('series');})
 
 router.get('/news', async ctx => { await ctx.render('news');})
 
-router.get('/avenir', async ctx => { await ctx.render('avenir');})
+router.get('/become', async ctx => { await ctx.render('become');})
 
 router.get('/header', async ctx => { await ctx.render('header');})
 
-router.get('/inscription', async ctx => { await ctx.render('inscription');})
+router.get('/login', async ctx => { await ctx.render('login');})
 
-router.get('/connexion', async ctx => { await ctx.render('connexion');})
+router.get('/sign-up', async ctx => { await ctx.render('sign-up');})
 
-router.get('/inscription', async ctx => { await ctx.render('inscription');})
-router.get('/synopsis',async ctx => { await ctx.render('synopsis');})
+router.get('/discover',async ctx => { await ctx.render('discover');})
 
 //Pages Dashboards
 

@@ -1,0 +1,318 @@
+/**
+=================================================
+Home Stylesheet
+=================================================
++*/
+
+
+
+/**
+=================================================
+Home Style Begin
+=================================================
++*/
+
+.cc-section {
+    padding: 9rem 0;
+}
+
+.cc-hero-inner {
+    position: relative;
+}
+
+.cc-hero-item {
+    position: relative;
+    height: 31.25rem;
+    -webkit-border-radius: 3.125rem;
+    -moz-border-radius: 3.125rem;
+    border-radius: 3.125rem;
+}
+
+.cc-hero-content {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) -10.09%, #000000 89.91%);
+    -webkit-border-radius: 3.125rem;
+    -moz-border-radius: 3.125rem;
+    border-radius: 3.125rem;
+}
+
+.cc-hero-wrap {
+    position: absolute;
+    bottom: 90px;
+    left: 90px;
+}
+
+.cc-hero-title {
+    color: var(--cc-white);
+    font-size: 3.875rem;
+    font-weight: 700;
+    line-height: 52px;
+    margin-block-end: 2.188rem;
+}
+
+.cc-newsletter-wrap {
+    position: relative;
+}
+
+.cc-newsletter-wrap-img {
+    position: relative;
+    height: 270px;
+    width: 100%;
+    -webkit-border-radius: 3.125rem;
+    -moz-border-radius: 3.125rem;
+    border-radius: 3.125rem;
+}
+
+.cc-newsletter-inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.cc-newsletter-content {
+    height: 100%;
+    width: 100%;
+    padding: 60px 40px;
+}
+
+.cc-newsletter-title,
+.cc-newsletter-desc {
+    color: #FFF5F5;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cc-newsletter-title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    margin-block-end: 14px;
+}
+
+.cc-newsletter-desc {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-block-end: 14px;
+}
+
+.cc-newsletter-form-wrap .cc-form-field {
+    height: 58px;
+    width: 500px;
+    padding-right: 12rem !important;
+}
+
+.cc-newsletter-form-wrap .cc-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+/***** ===== Home Style End ===== *****/
+
+
+
+/**
+=================================================
+Films Style Begin
+=================================================
++*/
+
+.cc-global-title {
+    color: var(--cc-black-default);
+    font-size: 40px;
+    font-weight: 700;
+    margin-block-end: 1.563rem;
+}
+
+.cc-films-inner .cc-hero-wrap {
+    bottom: 23px;
+    left: 73px;
+}
+
+.cc-films-inner .cc-hero-item {
+    height: 19.875rem;
+}
+
+.cc-films-inner  .cc-hero-banner {
+    height: 100%;
+}
+
+.cc-films-inner .cc-hero-title {
+    font-size: 2.5rem;
+}
+
+/***** ===== Films Style End ===== *****/
+
+
+
+/**
+=================================================
+Discover Style Begin
+=================================================
++*/
+
+.cc-single-head-banner-wrap {
+    width: 60%;
+    position: relative;
+    /*height: 30.375rem;*/
+    -webkit-border-radius: 3.125rem;
+    -moz-border-radius: 3.125rem;
+    border-radius: 3.125rem;
+}
+
+.cc-single-head-banner {
+    height: 100%;
+    width: 100%;
+}
+
+.cc-single-head-infos {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 45.83%, #000000 100%);
+    -webkit-border-radius: 3.125rem;
+    -moz-border-radius: 3.125rem;
+    border-radius: 3.125rem;
+}
+
+.cc-single-head-content {
+    width: 40%;
+    margin-left: 1rem;
+}
+
+.cc-block {
+    background-color: #D9D9D9;
+    padding: 1.25rem;
+    -webkit-border-radius: 3.125rem;
+    -moz-border-radius: 3.125rem;
+    border-radius: 3.125rem;
+}
+
+.cc-block-desc {
+    font-size: 19px;
+    font-weight: 400;
+    margin-block-end: 3rem;
+    -webkit-border-radius: 3.125rem;
+    -moz-border-radius: 3.125rem;
+    border-radius: 3.125rem;
+}
+
+.cc-single-content {
+    margin-block-start: 3rem;
+}
+
+.cc-single-p,
+.cc-single-actor-desc {
+    font-size: 1rem;
+    line-height: 30px;
+    margin-block-end: 1rem;
+}
+
+.cc-single-share .cc-section-title {
+    margin-block-end: 1rem;
+}
+
+.cc-social-media .cc-footer-span {
+    background-color: var(--cc-black-default);
+    color: var(--cc-white);
+}
+
+.cc-social-media .cc-footer-span {
+    margin: 0 30px 10px 0;
+}
+
+.cc-single-actor-inner {
+    margin-block: 2rem 5rem;
+}
+
+.cc-single-actor-img {
+    width: 390px;
+    height: 280px;
+}
+
+.cc-single-actor-content {
+    margin: 2rem 0 0 1rem;
+}
+
+/***** ===== Discover Style End ===== *****/
+
+
+
+/**
+=================================================
+Auth Style Begin
+=================================================
++*/
+
+.cc-section-auth {
+    display: flex;
+    padding: 7.5rem 0 0;
+}
+
+.cc-section-auth-item {
+    height: calc(100vh - 122px);
+    width: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cc-section-auth-inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cc-column-with-bg {
+    background: url("../images/auth_bg.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: var(--cc-white);
+}
+
+.cc-column-with-bg .cc-global-title {
+    color: var(--cc-white);
+}
+
+.cc-overlay {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(var(--cc-black-rgb), 0.8);
+}
+
+.cc-column-with-bg .cc-section-auth-inner {
+    position: absolute;
+    padding: 0 5rem;
+}
+
+.cc-auth-text {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-block-start: 2rem;
+}
+
+.cc-column-with-bg .cc-btn {
+    width: max-content;
+    margin: 1rem auto 0;
+}
+
+.cc-form-group {
+    margin-block-end: 1.5rem;
+}
+
+/***** ===== Auth Style End ===== *****/

@@ -1,0 +1,1467 @@
+/**
+=================================================
+General Stylesheet
+=================================================
++*/
+
+
+
+/* ===== Google Font Import - League Spartan ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --cc-primary: #FFCC00;
+    --cc-primary-rgb: 255, 204, 0;
+    --cc-primary-hover: #ffd633;
+    --cc-black-default: #1E1E1E;
+    --cc-black-default-rgb: 30, 30, 30;
+    --cc-black: #000;
+    --cc-black-rgb: 0, 0, 0;
+    --cc-white: #fff;
+    --cc-white-rgb: 255, 255, 255;
+    --cc-gray-1: #7E7E7E;
+    --cc-footer-bg: #131313;
+    --cc-bg-film: #952020;
+    --cc-bg-serie: #D26603;
+    --cc-bg-kids: #FF6D6D;
+    --cc-bg-actu: #952020;
+    --cc-bg-news: #0F0F0F;
+    --scroll-bar-color: #e9e2e3;
+    --scroll-thumb-color: #d2c6c6;
+    --scroll-thumb-color-hover: #c9c3c4;
+    --cc-font-family-inter: "Inter", "sans-serif";
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+::-moz-selection {
+    background: var(--cc-primary);
+    color: var(--cc-white);
+}
+
+::selection {
+    background: var(--cc-primary);
+    color: var(--cc-white);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cc-white);
+    color: var(--cc-black);
+    font-size: 1rem;
+    font-family: var(--cc-font-family-inter);
+    font-weight: 400;
+    /*line-height: 1.5;*/
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+
+/**
+=================================================
+Display Style Begin
+=================================================
++*/
+
+.cc-display-block {
+    display: block;
+}
+
+.cc-display-none {
+    display: none;
+}
+
+.cc-display-inline-block {
+    display: inline-block;
+}
+
+.cc-display-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+/***** ===== Display Style End ===== *****/
+
+
+
+/**
+=================================================
+Flex Style Begin
+=================================================
++*/
+
+.cc-container {
+    /*max-width: 1300px;*/
+    /*padding: 0 80px;*/
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 5rem;
+}
+
+.cc-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.cc-row-important {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-wrap: wrap !important;
+    flex-wrap: wrap !important;
+}
+
+.cc-flex-direction-row {
+    -ms-flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+}
+
+.cc-flex-direction-column {
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+}
+
+.cc-row-center {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.cc-row-between {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.cc-row-around {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+.cc-row-flex-start {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.cc-flex-wrap {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.cc-flex-no-wrap {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+.cc-column-1 {
+    width: 100%;
+}
+
+.cc-column-2 {
+    width: calc(100% / 2 - 24px);
+}
+
+.cc-column-3 {
+    width: calc(100% / 3 - 24px);
+}
+
+.cc-column-4 {
+    width: calc(100% / 4 - 24px);
+}
+
+.cc-justify-content-start {
+    -ms-flex-pack: start;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+}
+
+.cc-justify-content-end {
+    -ms-flex-pack: end;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+}
+
+.cc-justify-content-center {
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.cc-justify-content-between {
+    -ms-flex-pack: justify;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.cc-justify-content-around {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+.cc-align-items-start {
+    -ms-flex-align: start;
+    -webkit-box-align: start;
+    align-items: flex-start;
+}
+
+.cc-align-items-end {
+    -ms-flex-align: end;
+    -webkit-box-align: end;
+    align-items: flex-end;
+}
+
+.cc-align-items-center {
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.cc-align-items-baseline {
+    -ms-flex-align: baseline;
+    -webkit-box-align: baseline;
+    align-items: baseline;
+}
+
+.cc-align-items-stretch {
+    -ms-flex-align: stretch;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.cc-align-content-start {
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+}
+
+.cc-align-content-end {
+    -ms-flex-line-pack: end;
+    align-content: flex-end;
+}
+
+.cc-align-content-center {
+    -ms-flex-line-pack: center;
+    align-content: center;
+}
+
+.cc-align-content-between {
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+}
+
+.cc-align-content-around {
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+}
+
+.cc-align-content-stretch {
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+}
+
+.cc-align-self-auto {
+    -ms-flex-item-align: auto;
+    -ms-grid-row-align: auto;
+    align-self: auto;
+}
+
+.cc-align-self-start {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+}
+
+.cc-align-self-end {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+}
+
+.cc-align-self-center {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+}
+
+.cc-align-self-baseline {
+    -ms-flex-item-align: baseline;
+    align-self: baseline;
+}
+
+.cc-align-self-stretch {
+    -ms-flex-item-align: stretch;
+    -ms-grid-row-align: stretch;
+    align-self: stretch;
+}
+
+/***** ===== Flex Style End ===== *****/
+
+
+
+/**
+=================================================
+Position Style Begin
+=================================================
++*/
+
+.cc-position-static {
+    position: static;
+}
+
+.cc-position-relative {
+    position: relative;
+}
+
+.cc-position-absolute {
+    position: absolute;
+}
+
+.cc-position-fixed {
+    position: fixed;
+}
+
+.cc-position-sticky {
+    position: sticky;
+}
+
+.cc-fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+/***** ===== Position Style End ===== *****/
+
+
+
+/**
+=================================================
+Text Align Style Begin
+=================================================
++*/
+
+.cc-text-left {
+    text-align: left;
+}
+
+.cc-text-right {
+    text-align: right;
+}
+
+.cc-text-center {
+    text-align: center;
+}
+
+/***** ===== Text Align Style End ===== *****/
+
+
+
+/**
+=================================================
+Box-Shadow Style Begin
+=================================================
++*/
+
+.cc-shadow-none {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.cc-shadow-none-important {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+/***** ===== Box-Shadow Style End ===== *****/
+
+
+
+/**
+=================================================
+Color Style Begin
+=================================================
++*/
+
+.cc-color-primary {
+    color: var(--cc-primary);
+}
+
+.cc-bg-primary {
+    background-color: var(--cc-primary);
+}
+
+.cc-color-primary-important {
+    color: var(--cc-primary) !important;
+}
+
+.cc-bg-kids {
+    background-color: var(--cc-bg-kids);
+}
+
+.cc-bg-news {
+    background-color: var(--cc-bg-news);
+}
+
+.cc-bg-film {
+    background-color: var(--cc-bg-film);
+}
+
+.cc-bg-actu {
+    background-color: var(--cc-bg-actu);
+}
+
+.cc-bg-serie {
+    background-color: var(--cc-bg-serie);
+}
+
+.cc-color-white {
+    color: var(--cc-white);
+}
+
+.cc-color-black-default {
+    color: var(--cc-black-default);
+}
+
+.cc-color-black-default-important {
+    color: var(--cc-black-default) !important;
+}
+
+.cc-bg-black-default-important {
+    background-color: var(--cc-black-default) !important;
+}
+
+.cc-color-black {
+    color: var(--cc-black);
+}
+
+/***** ===== Color Style End ===== *****/
+
+
+
+/**
+=================================================
+Width and Height Style Begin
+=================================================
++*/
+
+.cc-w-1rem {
+    height: 1rem;
+}
+
+.cc-w-100 {
+    width: 100%;
+}
+
+.cc-h-auto {
+    height: auto;
+}
+
+.cc-w-auto {
+    width: auto;
+}
+
+.cc-mw-100 {
+    max-width: 100% !important;
+}
+
+.cc-mh-100 {
+    max-height: 100% !important;
+}
+
+/***** ===== Width and Height Style End ===== *****/
+
+
+
+/**
+=================================================
+Margin And Padding Style Begin
+=================================================
++*/
+
+.cc-mb-3rem {
+    margin-bottom: 3rem;
+}
+
+.cc-mb-4rem {
+    margin-bottom: 4rem;
+}
+
+.cc-mt-1rem {
+    margin-top: 1rem;
+}
+
+.cc-mt-5rem {
+    margin-top: 5rem;
+}
+
+/***** ===== Margin And Padding Style End ===== *****/
+
+
+
+/**
+=================================================
+Image Style Begin
+=================================================
++*/
+
+.cc-img-full {
+    height: 100%;
+    width: 100%;
+}
+
+.cc-img-w-100 {
+    width: 100%;
+}
+
+.cc-img-h-100 {
+    height: 100%;
+}
+
+.cc-img-cover {
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.cc-img-contain {
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+/***** ===== Image Style End ===== *****/
+
+
+
+/**
+=================================================
+Button Style Begin
+=================================================
++*/
+
+.cc-btn {
+    display: inline-block;
+    background: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    border: 1px solid transparent;
+    line-height: 1.5rem;
+    outline: none;
+    padding: 0.5rem 3rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    border-radius: 3.125rem;
+    -webkit-border-radius: 3.125rem;
+    -moz-border-radius: 3.125rem;
+    -ms-border-radius: 3.125rem;
+    -o-border-radius: 3.125rem;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.cc-btn-lg {
+    padding: 1rem 3.5rem;
+}
+
+.cc-btn + .cc-btn {
+    margin-left: 1.5rem;
+}
+
+.cc-btn:hover,
+.cc-btn:focus {
+    outline: 0;
+    text-decoration: none;
+}
+
+.cc-btn-primary, .cc-outline-primary:hover {
+    background-color: var(--cc-primary);
+    border-color: var(--cc-primary);
+    color: var(--cc-black-default);
+}
+
+.cc-btn-primary:hover {
+    background-color: var(--cc-primary-hover);
+    border-color: var(--cc-primary-hover);
+    color: var(--cc-black-default);
+}
+
+.cc-btn-primary:focus, .cc-outline-primary:focus {
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(var(--cc-primary-rgb), 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(var(--cc-primary-rgb), 0.25);
+}
+
+.cc-outline-primary {
+    border-color: var(--cc-primary);
+    color: var(--cc-primary);
+}
+
+/***** ===== Button Style End ===== *****/
+
+
+
+/**
+=================================================
+Form Style Begin
+=================================================
++*/
+
+.cc-form-group {
+    position: relative;
+    display: block;
+}
+
+.cc-form-field {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: calc(2.875rem + 2px);
+    /*padding: 1rem 1.625rem;*/
+    padding: 0 1.625rem;
+    font-size: 1rem;
+    font-family: var(--cc-font-family-inter);
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--cc-black);
+    background-color: var(--cc-white);
+    border: 2px solid var(--cc-primary);
+    caret-color: var(--cc-primary);
+    outline: none;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.cc-field-search {
+    height: 2.5rem;
+    width: 100%;
+    border: 1px solid var(--cc-primary);
+    font-size: 1rem;
+    outline: none;
+    padding-inline: 1.125rem 2rem;
+    -webkit-border-radius: 1.25rem;
+    -moz-border-radius: 1.25rem;
+    border-radius: 1.25rem;
+}
+
+.cc-search-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: absolute;
+    right: 12px;
+    top: 52%;
+    /*height: 3.125rem;*/
+    /*width: 3.125rem;*/
+    color: var(--cc-black-default);
+    cursor: default;
+    font-size: 1.2rem;
+    line-height: 3.125rem;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.cc-form-field:hover,
+.cc-field-search:hover {
+    -webkit-box-shadow: 0 0 4px rgba(var(--cc-primary-rgb), 0.2);
+    box-shadow: 0 0 4px rgba(var(--cc-primary-rgb), 0.2);
+}
+
+.cc-form-field:focus,
+.cc-field-search:focus {
+    background-color: var(--cc-white);
+    border: none;
+    -webkit-box-shadow: 0 0 0 0.1rem var(--cc-black-default);
+    box-shadow: 0 0 0 0.1rem var(--cc-black-default);
+    caret-color: var(--cc-primary);
+}
+
+.cc-form-field::-webkit-input-placeholder,
+.cc-field-search::-webkit-input-placeholder{
+    color: rgba(var(--cc-black-rgb), 0.4);
+}
+
+.cc-form-field::-moz-placeholder,
+.cc-field-search::-moz-placeholder {
+    color: rgba(var(--cc-black-rgb), 0.4);
+}
+
+.cc-form-field:-ms-input-placeholder,
+.cc-field-search:-ms-input-placeholder {
+    color: rgba(var(--cc-black-rgb), 0.4);
+}
+
+.cc-form-field::-webkit-input-placeholder,
+.cc-field-search::-webkit-input-placeholder {
+    color: rgba(var(--cc-black-rgb), 0.4);
+}
+
+.cc-form-field::-moz-placeholder,
+.cc-field-search::-moz-placeholder {
+    color: rgba(var(--cc-black-rgb), 0.4);
+}
+
+.cc-form-field:-ms-input-placeholder,
+.cc-field-search:-ms-input-placeholder {
+    color: rgba(var(--cc-black-rgb), 0.4);
+}
+
+.cc-form-field::-ms-input-placeholder,
+.cc-field-search::-ms-input-placeholder {
+    color: rgba(var(--cc-black-rgb), 0.4);
+}
+
+.cc-form-field::placeholder,
+.cc-field-search::placeholder {
+    color: rgba(var(--cc-black-rgb), 0.4);
+}
+
+/***** ===== Form Style End ===== *****/
+
+
+
+/**
+=================================================
+Scroll Bar Style Begin
+=================================================
++*/
+
+::-webkit-scrollbar {
+    width: 0.6rem;
+    background-color: var(--scroll-bar-color);
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb-color);
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scroll-thumb-color-hover);
+}
+
+/***** ===== Scroll Bar Style End ===== *****/
+
+
+
+/**
+=================================================
+Pagination Style Begin
+=================================================
++*/
+
+.cc-pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.cc-page-item {
+    margin: 0 0.188rem 1.125rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.cc-page-item:hover .cc-page-link {
+    background-color: var(--cc-black-default);
+    border: none;
+    color: var(--cc-white);
+}
+
+.cc-page-item.cc-active .cc-page-link {
+    color: var(--cc-primary);
+}
+
+.cc-page-prev .cc-page-link, .cc-page-next .cc-page-link {
+    border: 1px solid var(--cc-primary);
+    color: var(--cc-primary);
+}
+
+.cc-page-prev:hover .cc-page-link, .cc-page-next:hover .cc-page-link {
+    background-color: var(--cc-black-default);
+    border: none;
+    color: var(--cc-white);
+}
+
+.cc-page-prev {
+    margin-right: 2rem;
+}
+
+.cc-page-next {
+    margin-left: 2rem;
+}
+
+.cc-page-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 2.875rem;
+    width: 2.875rem;
+    line-height: 2.875rem;
+    color: var(--cc-gray-1);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+
+/***** ===== Pagination Style End ===== *****/
+
+
+
+/**
+=================================================
+Card Style Begin
+=================================================
++*/
+
+.cc-card-groups {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.cc-card {
+    position: relative;
+    /*background: var(--me-white);*/
+    /*border: 1px solid var(--me-grey);*/
+    /*box-shadow: 0 10px 30px rgba(var(--me-black-rgb), 0.1);*/
+    /*color: var(--me-black);*/
+    /*-webkit-border-radius: 1rem;*/
+    /*-moz-border-radius: 1rem;*/
+    /*border-radius: 1rem;*/
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.cc-card-custom {
+    position: relative;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.cc-card:hover {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    transform: translateY(-2px);
+}
+
+.cc-card-header-title {
+    font-weight: 700;
+}
+
+.cc-card-header-icon {
+    font-size: 1.5rem;
+}
+
+.cc-card-body {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-top: 1.5rem;
+}
+
+.cc-card-custom-body {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    -webkit-border-radius: 1.25rem;
+    -moz-border-radius: 1.25rem;
+    border-radius: 1.25rem;
+}
+
+.cc-card-custom-infos {
+    position: absolute;
+    bottom: 60px;
+    left: 30px;
+}
+
+.cc-card-custom-body .cc-badge {
+    position: absolute;
+    right: 20px;
+    top: 25px;
+}
+
+.cc-card-custom .cc-card-title,
+.cc-card-custom .cc-card-description {
+    color: var(--cc-white);
+}
+
+.cc-card-title {
+    color: var(--cc-black-default);
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.cc-card-description {
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+.cc-card-img,
+.cc-card-custom-img {
+    height: 344px;
+    width: 100%;
+    overflow: hidden;
+    -webkit-border-radius: 1.25rem;
+    -moz-border-radius: 1.25rem;
+    border-radius: 1.25rem;
+}
+
+.cc-card-custom-img {
+    height: 453px;
+}
+
+.cc-card-img-top {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 1rem;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.cc-card-custom-self {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.cc-card-img:hover .cc-card-custom-self,
+.cc-card-custom:hover .cc-card-custom-self {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.cc-stars {
+    margin-top: 6px;
+}
+
+.cc-stars i {
+    color: var(--cc-primary);
+    font-size: 1.2rem;
+    margin-right: 2px;
+}
+
+/***** ===== Card Style End ===== *****/
+
+
+
+/**
+=================================================
+Others Style Begin
+=================================================
++*/
+
+.cc-cursor-pointer {
+    cursor: pointer;
+}
+
+.cc-cursor-default {
+    cursor: default;
+}
+
+.cc-transition {
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.cc-border-radius-0_875rem {
+    border-radius: 0.875rem;
+}
+
+.cc-border-radius-1_25rem {
+    border-radius: 1.25rem;
+}
+
+.cc-border-radius-1_563rem {
+    border-radius: 1.563rem;
+}
+
+.cc-border-radius-2_5rem {
+    border-radius: 2.5rem;
+}
+
+.cc-border-radius-3_125rem {
+    border-radius: 3.125rem;
+}
+
+.cc-fw-400 {
+    font-weight: 400;
+}
+
+.cc-fw-500 {
+    font-weight: 500;
+}
+
+.cc-fw-600 {
+    font-weight: 600;
+}
+
+.cc-fw-700 {
+    font-weight: 700;
+}
+
+.cc-white-space-normal {
+    white-space: normal;
+}
+
+.cc-white-space-nowrap {
+    white-space: nowrap;
+}
+
+.cc-border-none {
+    border: none;
+}
+
+/***** ===== Others Style End ===== *****/
+
+
+
+/**
+=================================================
+CorisCine General Style Begin
+=================================================
++*/
+
+.cc-section-title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 1.875rem;
+}
+
+.cc-section + .cc-section {
+    padding: 0 0 6rem;
+}
+
+
+/**
+=================================================
+Scroll Up and Menu Style Begin
+=================================================
++*/
+
+.cc-scroll-up-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    right: 23px;
+    height: 2.813rem;
+    width: 2.813rem;
+    background: var(--cc-primary);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    color: var(--cc-white);
+    cursor: pointer;
+    font-size: 1.875rem;
+    text-align: center;
+    line-height: 2.813rem;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 11;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+.cc-scroll-up-btn i {
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.cc-scroll-up-btn:hover i {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+.cc-scroll-up-btn.cc-show {
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.cc-link-hover:hover {
+    text-decoration: underline;
+}
+
+/***** ===== Scroll Up and Menu Style End ===== *****/
+
+
+
+/**
+=================================================
+Badge Style Begin
+=================================================
++*/
+
+.cc-badge {
+    display: inline-block;
+    color: var(--cc-white);
+    cursor: pointer;
+    font-size: 1.25rem;
+    padding: 0.3rem 1.8rem;
+    border-radius: 3rem;
+}
+
+.cc-tabs .cc-badge {
+    padding: 0.5rem 4rem;
+}
+
+.cc-badge-primary {
+    background-color: var(--cc-primary);
+}
+
+/***** ===== Badge Style End ===== *****/
+
+
+
+/**
+=================================================
+Carousel Style Begin
+=================================================
++*/
+
+.cc-user-choice .owl-dots { display: none }
+
+.owl-dots {
+    margin-top: 0.8rem;
+    text-align: center;
+}
+
+.owl-dot {
+    height: 0.8rem;
+    width: 0.8rem;
+    outline: none !important;
+    background: var(--cc-black-default) !important;
+    margin: 0 0.5rem 0 0;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+    background: var(--cc-primary) !important;
+}
+
+/*.owl-nav {*/
+/*    position: absolute;*/
+/*    bottom: -4px;*/
+/*    right: 0;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*}*/
+
+.owl-prev, .owl-next {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.owl-prev {
+    left: 0;
+}
+
+.owl-next {
+    right: 0;
+}
+
+.owl-prev, .owl-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    outline: none !important;
+    background: var(--cc-black-default) !important;
+    color: var(--cc-white) !important;
+    margin: 0 0 0 1rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.owl-prev:hover, .owl-next:hover {
+    background: var(--cc-primary) !important;
+    color: var(--cc-white) !important;
+}
+
+.owl-prev span, .owl-next span {
+    display: block;
+    height: 1rem;
+    width: 1rem;
+    font-size: 2rem;
+    line-height: 0.813rem;
+}
+
+/***** ===== Carousel Style End ===== *****/
+
+
+
+/**
+=================================================
+CorisCine Loader Begin
+=================================================
++*/
+
+.cc-loader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(var(--cc-white-rgb), 0.8);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 200;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.cc-loader.cc-show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.cc-loader .cc-loader-ring {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+    border: 5px solid #ddd;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.cc-loader .cc-loader-ring::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 5px solid var(--cc-primary);
+    border-top-color: transparent;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    animation: rotate 1.5s linear infinite;
+    -webkit-animation: rotate 1.5s linear infinite;
+}
+
+@-webkit-keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+/***** ===== CorisCine Loader End ===== *****/
+
+/***** ===== CorisCine General Style End ===== *****/
