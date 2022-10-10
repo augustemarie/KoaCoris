@@ -1,4 +1,19 @@
 
+<!--JavaScript Begin-->
+
+<script>
+    jQuery(document).ready(function(){
+        let title= localStorage.getItem("title")
+        let content= localStorage.getItem("content")
+        let description= localStorage.getItem("description")
+        jQuery('.cc-global-title').html(title);
+        jQuery('.cc-block-desc').html(description);
+        jQuery('.cc-single-p').html(content);
+    });
+</script>
+
+<!--JavaScript End-->
+
 <!-- Home Section Begin -->
 
 <section class="cc-section">
@@ -48,8 +63,6 @@
             <h3 class="cc-section-title">Synopsis</h3>
 
             <p class="cc-single-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
-            <p class="cc-single-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
-            <p class="cc-single-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
 
             <div class="cc-single-share">
 
@@ -94,153 +107,7 @@
 
             <h3 class="cc-section-title">Sélectionné pour vous</h3>
 
-            <div class="cc-card-groups cc-user-choice owl-carousel">
-
-                <div class="cc-card-custom">
-
-                    <div class="cc-card-custom-img">
-
-                        <img src="/images/alvdan.jpg" alt="alvdan picture" class="cc-card-custom-self cc-img-full cc-img-cover cc-border-radius-1_25rem">
-
-                    </div>
-
-                    <a class="cc-card-custom-body" href="#">
-
-                        <div class="cc-card-custom-infos">
-
-                            <h3 class="cc-card-title">Alvdan</h3>
-
-                            <div class="cc-card-description">Film pour toute la famille</div>
-
-                        </div>
-
-                        <span class="cc-badge cc-bg-film">Film</span>
-
-                    </a>
-
-                </div>
-
-                <div class="cc-card-custom">
-
-                    <div class="cc-card-custom-img">
-
-                        <img src="/images/arcane.jpeg" alt="arcane picture" class="cc-card-custom-self cc-img-full cc-img-cover cc-border-radius-1_25rem">
-
-                    </div>
-
-                    <a class="cc-card-custom-body" href="#">
-
-                        <div class="cc-card-custom-infos">
-
-                            <h3 class="cc-card-title">ARCANE</h3>
-
-                            <div class="cc-card-description">Championnes de leurs villes jumelles et rivales</div>
-
-                        </div>
-
-                        <span class="cc-badge cc-bg-serie">Série</span>
-
-                    </a>
-
-                </div>
-
-                <div class="cc-card-custom">
-
-                    <div class="cc-card-custom-img">
-
-                        <img src="/images/krypto.jpeg" alt="ima banner" class="cc-card-custom-self cc-img-full cc-img-cover cc-border-radius-1_25rem">
-
-                    </div>
-
-                    <a class="cc-card-custom-body" href="#">
-
-                        <div class="cc-card-custom-infos">
-
-                            <h3 class="cc-card-title">KRYPTO ET LES SUPER-ANIMAUX</h3>
-
-                            <div class="cc-card-description">krypto, le super-chien de Superman</div>
-
-                        </div>
-
-                        <span class="cc-badge cc-bg-kids">Kids</span>
-
-                    </a>
-
-                </div>
-
-                <div class="cc-card-custom">
-
-                    <div class="cc-card-custom-img">
-
-                        <img src="/images/alvdan.jpg" alt="alvdan picture" class="cc-card-custom-self cc-img-full cc-img-cover cc-border-radius-1_25rem">
-
-                    </div>
-
-                    <a class="cc-card-custom-body" href="#">
-
-                        <div class="cc-card-custom-infos">
-
-                            <h3 class="cc-card-title">Alvdan</h3>
-
-                            <div class="cc-card-description">Film pour toute la famille</div>
-
-                        </div>
-
-                        <span class="cc-badge cc-bg-film">Film</span>
-
-                    </a>
-
-                </div>
-
-                <div class="cc-card-custom">
-
-                    <div class="cc-card-custom-img">
-
-                        <img src="/images/arcane.jpeg" alt="arcane picture" class="cc-card-custom-self cc-img-full cc-img-cover cc-border-radius-1_25rem">
-
-                    </div>
-
-                    <a class="cc-card-custom-body" href="#">
-
-                        <div class="cc-card-custom-infos">
-
-                            <h3 class="cc-card-title">ARCANE</h3>
-
-                            <div class="cc-card-description">Championnes de leurs villes jumelles et rivales</div>
-
-                        </div>
-
-                        <span class="cc-badge cc-bg-serie">Série</span>
-
-                    </a>
-
-                </div>
-
-                <div class="cc-card-custom">
-
-                    <div class="cc-card-custom-img">
-
-                        <img src="/images/krypto.jpeg" alt="ima banner" class="cc-card-custom-self cc-img-full cc-img-cover cc-border-radius-1_25rem">
-
-                    </div>
-
-                    <a class="cc-card-custom-body" href="#">
-
-                        <div class="cc-card-custom-infos">
-
-                            <h3 class="cc-card-title">KRYPTO ET LES SUPER-ANIMAUX</h3>
-
-                            <div class="cc-card-description">krypto, le super-chien de Superman</div>
-
-                        </div>
-
-                        <span class="cc-badge cc-bg-kids">Kids</span>
-
-                    </a>
-
-                </div>
-
-            </div>
+            <div class="cc-card-groups cc-user-choice owl-carousel for-you"></div>
 
         </div>
 

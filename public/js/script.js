@@ -97,6 +97,7 @@ var post = {
                 let post = response.data; //recuperer le data (la liste des postes dans notre cas)
                 let html_output = "";
                 let movies_series = "";
+                let become = "";
                 $.each(post, function (key, value) {
                     let post_type = value.post_type.name;
                     html_output = `<div class="cc-card-custom">
@@ -107,7 +108,7 @@ var post = {
 
                 </div>
 
-                <a class="cc-card-custom-body" href="#">
+                <a class="cc-card-custom-body single-post" href="#" data-id="${value.id}">
 
                     <div class="cc-card-custom-infos">
 
@@ -122,9 +123,10 @@ var post = {
                 </a>
 
             </div>`;
+
                     movies_series = `<div class="cc-card cc-column-4 cc-mb-4rem">
 
-                <a href="#" class="cc-card-img cc-display-block">
+                <a href="#" class="cc-card-img cc-display-block single-post" data-id="${value.id}">
 
                     <img src="/images/alvdan.jpg" alt="alvdan picture" class="cc-card-custom-self cc-img-full cc-img-cover cc-border-radius-1_25rem">
 
@@ -149,6 +151,31 @@ var post = {
                 </div>
 
             </div>`
+            if(value.status == 'COMING') {
+                become = `<div class="cc-card-custom cc-column-3 cc-mb-3rem">
+
+                    <div class="cc-card-custom-img">
+
+                        <img src="/images/alvdan.jpg" alt="alvdan picture" class="cc-card-custom-self cc-img-full cc-img-cover cc-border-radius-1_25rem">
+
+                    </div>
+
+                    <a class="cc-card-custom-body" href="#">
+
+                        <div class="cc-card-custom-infos">
+
+                            <h3 class="cc-card-title">${value.title}</h3>
+
+                            <div class="cc-card-description">${value.description}</div>
+
+                        </div>
+
+<!--                        <span class="cc-badge cc-bg-primary cc-color-black-default-important">10/12/2022</span>-->
+
+                    </a>
+
+                </div>`
+            }
 
                     $('.for-you').trigger('add.owl.carousel', html_output).trigger('refresh.owl.carousel');
                     $('.for-you').trigger("to.owl.carousel", [$(".owl-item").length, 500,]);
@@ -159,18 +186,16 @@ var post = {
                         $('.single-films').append(movies_series);
                     }
 
-
                     if (post_type == "SERIES") {
                         $('.series').trigger('add.owl.carousel', html_output).trigger('refresh.owl.carousel');
                         $('.series').trigger("to.owl.carousel", [$(".owl-item").length, 500,]);
                         $('.single-series').append(movies_series);
                     }
 
+                    $('.become-post').append(become);
+
 
                 })
-                // $('.for-you').html(html_output)
-
-                // document.getElementsByClassName("films").innerHTML = html_output;
             },
             error: function (xhr, status, error) {
                 console.error(xhr);
@@ -182,23 +207,20 @@ var post = {
 
     display_details: function () {
 
-        $(document).on('click', '.film-details', function () {
+        $(document).on('click', '.single-post', function (e) {
+            e.preventDefault();
             let id = $(this).data('id')
-            console.log(id)
-
             $.ajax({
                 type: "GET",
                 url: api_base_url + '/post/' + id,
                 contentType: "application/json",
                 dataType: 'json',
                 success: function (response) {
-                    let film = response.post;
-                    let film_output = "";
+                    let film = response.data;
                     window.localStorage.setItem("title", film.title);
                     window.localStorage.setItem("content", film.content);
                     window.localStorage.setItem("description", film.description);
-
-                    window.location.replace('/synopsis');
+                    window.location.replace('/discover');
 
                 },
                 error: function (xhr, status, error) {
