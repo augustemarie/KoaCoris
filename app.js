@@ -17,6 +17,7 @@ const router = new KoaRouter();
 exports.createServer=function (){
         const app = new Koa()
         const koaOptions = {
+
                 origin:true,
                 credentials: true,
 
