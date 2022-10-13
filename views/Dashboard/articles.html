@@ -10,26 +10,26 @@
                 <div class="row">
                     <div class="col-md-5">
                         <h5>Add Contents</h5>
-                        <form class="form-group">
+                        <form class="form-group" id="post-form" enctype="multipart/form-data">
                             <div class="mb-3">
                                 <label for="name">Titre</label>
-                                <input type="text" name="text" id="text" class="form-control">
+                                <input type="text" name="title" id="text" class="form-control">
                             </div>
                             <div class="mb-3">
                                 <label for="description" class="form-label">Description</label>
-                                <textarea class="form-control"></textarea>
+                                <textarea class="form-control" name="description"></textarea>
                             </div>
                             <div class="mb-3">
                                 <label for="description" class="form-label">Content</label>
-                                <textarea class="form-control" rows="8" cols="100"></textarea>
+                                <textarea class="form-control" rows="8" cols="100" name="content"></textarea>
                             </div>
                             <div class="mb-3">
-                                <label for="trailer" class="form-label">Trailer</label>
-                                <input class="form-control" type="file" id="trailer">
+                                <label for="trailer" class="form-label">Banner</label>
+                                <input class="form-control" type="file" id="banner" name="banner" accept="image/*">
                             </div>
                             <div class="mb-3">
                                 <label for="cover" class="form-label">Status</label>
-                                <select class="form-select" aria-label="Default select example">
+                                <select class="form-select" aria-label="Default select example" name="status">
                                     <option value="PUBLISH">PUBLISH</option>
                                     <option value="TRASH">TRASH</option>
                                     <option value="DRAFT">DRAFT</option>
@@ -39,14 +39,14 @@
 
                             <div class="mb-3">
                                 <label for="cover" class="form-label">Post Categories</label>
-                                <select class="form-select" aria-label="Default select example" id="post-category">
+                                <select class="form-select" aria-label="Default select example" id="post-category" name="post_category_id">
 
                                 </select>
                             </div>
 
                             <div class="mb-3">
                                 <label for="cover" class="form-label">Post Type</label>
-                                <select class="form-select" aria-label="Default select example" id="post-type">
+                                <select class="form-select" aria-label="Default select example" id="post-type" name="post_type_id">
 
                                 </select>
                             </div>
