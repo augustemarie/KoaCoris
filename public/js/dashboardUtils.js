@@ -2,6 +2,7 @@ $(document).ready(function () {
 
     // AXIOS REQUEST BEGIN
     const api_base_url = "https://test3.afrikastream.com/";
+
     axios
         .get(api_base_url + "post")
         .then((response) => {
@@ -26,17 +27,37 @@ $(document).ready(function () {
     $(document).on('submit', '#post-form', async function (e) {
         e.preventDefault();
         let file = $('#banner')[0].files[0];
-        let formData = new FormData(this)
-        formData.append('user_id', "1");
-        let formDataObject = Object.fromEntries(formData.entries())
-        await axios
-            .post("http://localhost:4000/post/create", formDataObject)
-            .then((response) => {
-                console.log(response)
+        let form = new FormData();
+        form.append("file", file, file.name);
+
+        //Data Post
+        let postData = new FormData(this)
+        postData.append('user_id', "1");
+
+
+        let config = {
+            method: 'post',
+            url: 'http://localhost:4000/upload/video/',
+            data: form
+        };
+
+        axios(config)
+            .then(function (response) {
+                postData.set('banner', response.data.data.name);
+                let formDataObject = Object.fromEntries(postData.entries())
+                axios
+                    .post("http://localhost:4000/post/create", formDataObject)
+                    .then((response) => {
+                        alert(response.data.message);
+                        display_post(response.data.data);
+                    })
+                    .catch((error)=>{
+                        console.log(error);
+                })
             })
-            .catch((error) => {
+            .catch(function (error) {
                 console.log(error);
-            })
+            });
     });
 
 
@@ -48,7 +69,6 @@ $(document).ready(function () {
             posts_content = `<tr>
                 <td>${value.title}</td>
                 <td>${value.description}</td>
-                <td>${value.banner}</td>
                 <td>${value.status}</td>
                 <td>${value.post_type.name}</td>
                 <td>${value.post_categories.name}</td>
