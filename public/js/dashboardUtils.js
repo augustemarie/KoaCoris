@@ -24,6 +24,42 @@ $(document).ready(function () {
         })
         .catch((error) => console.error(error));
 
+
+    axios
+        .get(api_base_url + "post/category")
+        .then((response) => {
+            display_categories(response.data.data, "post-category")
+        })
+        .catch((error) => console.error(error));
+
+    $(document).on('submit', '#categories-form', async function (e) {
+        e.preventDefault();
+        //
+        let data = JSON.stringify({
+            "user_id": 1,
+            "name": $("#category-name").val(),
+            "description": $("#category-description").val()
+        });
+
+        var config = {
+            method: 'post',
+            url: 'http://localhost:4000/post/category/create',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data: data
+        };
+
+        await axios(config)
+            .then(function (response) {
+                alert(response.data.message);
+                display_categories(response.data.data);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    })
+
     $(document).on('submit', '#post-form', async function (e) {
         e.preventDefault();
         let file = $('#banner')[0].files[0];
@@ -33,7 +69,6 @@ $(document).ready(function () {
         //Data Post
         let postData = new FormData(this)
         postData.append('user_id', "1");
-
 
         let config = {
             method: 'post',
@@ -51,9 +86,9 @@ $(document).ready(function () {
                         alert(response.data.message);
                         display_post(response.data.data);
                     })
-                    .catch((error)=>{
+                    .catch((error) => {
                         console.log(error);
-                })
+                    })
             })
             .catch(function (error) {
                 console.log(error);
@@ -83,6 +118,19 @@ $(document).ready(function () {
         $.each(post, function (key, value) {
             post_attributes = `<option value=${value.id}>${value.name}</option>`
             $("#" + selector).append(post_attributes);
+        });
+    }
+
+    function display_categories(categories) {
+        let categories_content = "";
+        $.each(categories, function (key, value) {
+            categories_content = `  <tr>
+                                        <td>${value.id}</td>
+                                        <td>${value.name}</td>
+                                        <td>${value.description}</td>
+                                    </tr>`;
+
+            $("#categories-list").append(categories_content);
         });
     }
 });
