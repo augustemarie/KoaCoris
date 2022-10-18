@@ -43,7 +43,7 @@ $(document).ready(function () {
 
         var config = {
             method: 'post',
-            url: 'http://localhost:4000/post/category/create',
+            url: api_base_url + "/post/category/create",
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -72,7 +72,7 @@ $(document).ready(function () {
 
         let config = {
             method: 'post',
-            url: 'http://localhost:4000/upload/video/',
+            url: api_base_url + "/upload/video/",
             data: form
         };
 
@@ -81,7 +81,7 @@ $(document).ready(function () {
                 postData.set('banner', response.data.data.name);
                 let formDataObject = Object.fromEntries(postData.entries())
                 axios
-                    .post("http://localhost:4000/post/create", formDataObject)
+                    .post(api_base_url + "/post/create", formDataObject)
                     .then((response) => {
                         alert(response.data.message);
                         display_post(response.data.data);
