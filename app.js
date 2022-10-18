@@ -37,16 +37,11 @@ exports.createServer=function (){
         app.use(router.routes()).use(router.allowedMethods());
         app.use(cors(koaOptions));
 
-        app.listen(3000,() => console.log('Server started...'));
-
+        app.listen(6000,() => console.log('Server started...'));
 };
 
 
-
-    //Pages Sites
-
-
-
+//Pages Sites
 router.get('/', async ctx => {
         await ctx.redirect("/index");
 })
@@ -82,11 +77,6 @@ router.get('/categories', async ctx => { await ctx.render('categories');})
 router.get('/types', async ctx => { await ctx.render('types');})
 
 
-
-//Json Prettier Middleware
-
-//Simple Middleware
-//app.use(async ctx => (ctx.body = { msg: 'Hello World' }));
 
 router.get('/test', ctx => (ctx.body = 'Hello Test'));
 
