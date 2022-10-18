@@ -29,12 +29,13 @@ var users = {
                 data: formDataToJson,
                 success: function (response) {
                     alert(response.message);
-                    let userData = response.users;
+                    let userData = response.data;
 
                     if (userData.role == "USERS") {
                         window.location.replace('/index');
                     } else if (userData.role == "ADMIN") {
                         window.location.replace('/dashboard/articles');
+                        window.localStorage.setItem("user_id", userData.id);
                     }
                     window.localStorage.setItem("username", userData.email);
                 },
@@ -69,7 +70,7 @@ var users = {
                         window.location.replace('/index');
                     } else if (formData.role = "ADMIN") {
                         window.location.replace('/dashboard/articles');
-
+                        window.localStorage.setItem("user_id", response.data.id);
                     }
                 },
                 error: function (xhr, status, error) {
@@ -104,7 +105,7 @@ var post = {
 
                 <div class="cc-card-custom-img">
 
-                    <img src="/images/alvdan.jpg" alt="alvdan picture" class="cc-card-custom-self cc-img-full cc-img-cover cc-border-radius-1_25rem">
+                    <img src="${api_base_url}${value.banner}" alt="alvdan picture" class="cc-card-custom-self cc-img-full cc-img-cover cc-border-radius-1_25rem">
 
                 </div>
 
@@ -128,7 +129,7 @@ var post = {
 
                 <a href="#" class="cc-card-img cc-display-block single-post" data-id="${value.id}">
 
-                    <img src="/images/alvdan.jpg" alt="alvdan picture" class="cc-card-custom-self cc-img-full cc-img-cover cc-border-radius-1_25rem">
+                    <img src="${api_base_url}${value.banner}" alt="alvdan picture" class="cc-card-custom-self cc-img-full cc-img-cover cc-border-radius-1_25rem">
 
                 </a>
 
@@ -151,12 +152,12 @@ var post = {
                 </div>
 
             </div>`
-            if(value.status == 'COMING') {
-                become = `<div class="cc-card-custom cc-column-3 cc-mb-3rem">
+                    if (value.status == 'COMING') {
+                        become = `<div class="cc-card-custom cc-column-3 cc-mb-3rem">
 
                     <div class="cc-card-custom-img">
 
-                        <img src="/images/alvdan.jpg" alt="alvdan picture" class="cc-card-custom-self cc-img-full cc-img-cover cc-border-radius-1_25rem">
+                        <img src="${api_base_url}${value.banner}" alt="alvdan picture" class="cc-card-custom-self cc-img-full cc-img-cover cc-border-radius-1_25rem">
 
                     </div>
 
@@ -175,7 +176,7 @@ var post = {
                     </a>
 
                 </div>`
-            }
+                    }
 
                     $('.for-you').trigger('add.owl.carousel', html_output).trigger('refresh.owl.carousel');
                     $('.for-you').trigger("to.owl.carousel", [$(".owl-item").length, 500,]);
@@ -229,8 +230,5 @@ var post = {
 
             });
         })
-
-
     }
-
 }

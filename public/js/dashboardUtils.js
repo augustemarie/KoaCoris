@@ -36,7 +36,7 @@ $(document).ready(function () {
         e.preventDefault();
         //
         let data = JSON.stringify({
-            "user_id": 1,
+            "user_id": localStorage.getItem("user_id"),
             "name": $("#category-name").val(),
             "description": $("#category-description").val()
         });
@@ -68,7 +68,7 @@ $(document).ready(function () {
 
         //Data Post
         let postData = new FormData(this)
-        postData.append('user_id', "1");
+        postData.append('user_id', localStorage.getItem("user_id"));
 
         let config = {
             method: 'post',
