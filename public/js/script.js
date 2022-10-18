@@ -219,6 +219,7 @@ var post = {
                 success: function (response) {
                     let film = response.data;
                     window.localStorage.setItem("title", film.title);
+                    window.localStorage.setItem("banner", film.banner);
                     window.localStorage.setItem("content", film.content);
                     window.localStorage.setItem("description", film.description);
                     window.location.replace('/discover');
